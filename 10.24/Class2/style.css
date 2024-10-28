@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    background-color: #ff7c7c;
+    width: 100%;
+    height: 30px;
+}
+nav {
+    position: fixed;
+    top: 30px;
+    background-color: #9a9a9a;
+    width: 100%;
+    height: 30px;
+}
+section {
+    position: fixed;
+    top: 60px;
+    background-color: #8a8eff;
+    width: 100%;
+    height:100%;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: #a4ff5a;
+    width: 100%;
+    height: 30px;
+}
