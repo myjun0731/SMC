@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 
 <style>
+* {
+	margin: 0;
+}
+
 header {
 	top: 0px;
 	left: 0px;
