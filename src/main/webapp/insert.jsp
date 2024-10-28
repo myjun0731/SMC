@@ -53,7 +53,7 @@ input {
 					ResultSet rs = pstmt.executeQuery();
 					rs.next();
 				%>
-
+ 
 				<tr>
 					<td>회원번호(자동발생)</td>
 					<td><input type="text" name="custno"

@@ -11,7 +11,7 @@
 <body>
 	<%
 	Class.forName("oracle.jdbc.OracleDriver");
-	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//local:1521/xe", "system", "1234");
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "1234");
 	%>
 
 	<form action=""></form>
