@@ -43,13 +43,13 @@ input {
 		<h2>홈쇼핑 회원 등록</h2>
 		<form method="post" action="1_action.jsp" name="frm">
 
-			<table barder="1">
+			<table border="1">
 				<%
 				request.setCharacterEncoding("UTF-8");
 
 				try {
 					String sql = "select max(custno)+1 from tbl_member";
-					PreparedStatement pstmt = con.preparedStatement(sql);
+					PreparedStatement pstmt = con.prepareStatement(sql);
 					ResultSet rs = pstmt.executeQuery();
 					rs.next();
 				%>
