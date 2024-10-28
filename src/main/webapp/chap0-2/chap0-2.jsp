@@ -10,21 +10,22 @@
 	<%
 	request.setCharacterEncoding("UTF-8");
 	%>
-	<form action="Chapter0-list.jsp">
+	<form action="chap-02_confirm.jsp" name="form">
 		<table border="1">
 			<tr>
 				<td>ID</td>
-				<td><input type="text" name="ID"></td>
-			</tr>
-			<tr>
-				<td>PW</td>
-				<td><input type="text" name="PW"></td>
+				<td><input type="text" name="id" required></td>
 			</tr>
 
 			<tr>
-				<td bordercolor="2"><input type="submit" value="등록"></td>
+				<td>내용</td>
+				<td><input type="text" name="contents" required></td>
+			</tr>
+			<tr>
+			<td> <input type="submit" value="제출"> </td>
 			</tr>
 		</table>
+
 	</form>
 </body>
 </html>

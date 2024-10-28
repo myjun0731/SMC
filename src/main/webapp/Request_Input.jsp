@@ -7,6 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<section>section</section>
+	<form action="Request_confirm.jsp">
+
+		<table border="1">
+			<tr>
+				<th>아이디</th>
+				<%
+				if (session.getAttribute("") == null){
+					
+				}
+				%>
+
+			</tr>
+
+		</table>
+	</form>
 </body>
 </html>
