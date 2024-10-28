@@ -60,6 +60,12 @@ input {
 						value="<%=rs.getString(1)%>" readonly></td>
 				</tr>
 
+				<%
+				} catch (Exception e) {
+				e.printStackTrace();
+				}
+				%>
+
 				<tr>
 					<td>회원성명</td>
 					<td><input type="text" name="custname"></td>
@@ -89,11 +95,6 @@ input {
 						onclick="add()"> <input type="button" value="다시쓰기"
 						onclick="res()"></td>
 				</tr>
-				<%
-				} catch (Exception e) {
-				e.printStackTrace();
-				}
-				%>
 			</table>
 		</form>
 	</section>
