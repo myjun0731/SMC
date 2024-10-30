@@ -17,7 +17,9 @@ jdbc.pstmt.setString(1, korea_name);
 jdbc.pstmt.setInt(2, student_num);
 jdbc.pstmt.setString(3, dirth_date);
 jdbc.pstmt.setString(4, blood_type);
-jdbc.pstmt.executeQuery();
 jdbc.conn.commit();
+jdbc.pstmt.executeQuery();
 jdbc.conn.close();
+
+response.sendRedirect("ExDateList.jsp");
 %>
