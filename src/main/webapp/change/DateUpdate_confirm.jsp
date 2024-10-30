@@ -1,3 +1,4 @@
+<%@page import="java.sql.SQLException"%>
 <%@page import="study.JDBC"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -13,17 +14,15 @@ String contents = request.getParameter("contents");
 String sql = "UPDATE text_input SET contents=? WHERE member_id=?";
 
 JDBC jdbc = new JDBC();
-if ("member_id".equals(null)){
+try {
 	jdbc.pstmt = jdbc.conn.prepareStatement(sql);
 	jdbc.pstmt.setString(1, contents);
 	jdbc.pstmt.setString(2, member_id);
 	jdbc.pstmt.executeUpdate();
+	jdbc.conn.commit();
 	response.sendRedirect("DateList.jsp");
-} else {
-	request.setAttribute("LoginErrMsg", "(필수 작성란)");
+} catch (SQLException e) {
+	request.setAttribute("LoginErrMsg", "[!] 내용을 입력해주세요.");
 	request.getRequestDispatcher("DateUpdate.jsp").forward(request, response);
-	
-	
 }
-jdbc.conn.commit();
 %>

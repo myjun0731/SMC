@@ -20,7 +20,6 @@
 	jdbc.pstmt = jdbc.conn.prepareStatement(sql);
 	jdbc.pstmt.setString(1, member_id);
 	jdbc.rs = jdbc.pstmt.executeQuery();
-
 	%>
 
 	<form action="DateUpdate_confirm.jsp" name="form">
@@ -33,14 +32,14 @@
 				<td><input type="text" name="member_id" readonly
 					value="<%=jdbc.rs.getString(1)%>"></td>
 				<td><input type="text" name="contents"
-					value="<%=jdbc.rs.getString(2)%>" placeholder="<%=request.getAttribute("LoginErrMsg")%>"></td>
+					placeholder="<%=jdbc.rs.getString(2)%>"></td>
 			</tr>
 			<%
 			}
 			%>
 
 			<tr>
-				<td colspan="2"><input type="submit" value="submit"></td>
+				<td colspan="2"><input type="submit" value="변경"> <%=request.getAttribute("LoginErrMsg")%></td>
 			</tr>
 		</table>
 
