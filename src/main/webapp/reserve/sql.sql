@@ -5,7 +5,6 @@ grade char(1),
 joindate date
 );
 
-
 create table food (
 food_name varchar2(500) primary key
 );

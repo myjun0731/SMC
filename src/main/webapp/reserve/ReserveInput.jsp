@@ -16,9 +16,10 @@ select {
 </head>
 <body>
 	<%
+	request.setCharacterEncoding("UTF-8");
 	String get_id_sql = "select max(reserve_id) + 1 from reserve_movie";
 	String food_list_sql = "select food_name from food";
-	String open_movie_list_sql = "select open_movie_name from open_movie";
+	String open_movie_list_sql = "select OPEN_MOVIE_NAME from open_movie";
 	%>
 
 	<form action="Reserveinput_confirm.jsp" name="form">
@@ -33,13 +34,12 @@ select {
 			<tr>
 				<th>예매 번호</th>
 				<td><input type="text" name="reserve_id"
-					value="<%=GET_ID_JDBC.rs.getString(1)%>" /></td>
+					value="<%=GET_ID_JDBC.rs.getString(1)%>" readonly/></td>
 			</tr>
 
 			<%
 			GET_ID_JDBC.close();
 			%>
-
 			<tr>
 				<th>회원 아이디</th>
 				<td><input type="text" name="member_id" /></td>
@@ -53,8 +53,7 @@ select {
 
 			<tr>
 				<th>판매 음식</th>
-				<td>
-					<select name="food name">
+				<td><select name="food_name">
 						<option value=""></option>
 						<%
 						while (FOOD_LIST_JDBC.rs.next()) {
@@ -65,8 +64,7 @@ select {
 						<%
 						}
 						%>
-					</select>
-				</td>
+				</select></td>
 			</tr>
 
 			<%
@@ -82,17 +80,18 @@ select {
 			<tr>
 				<th>상영 영화</th>
 				<td><select name="open_movie_name">
-						<option name="open_movie.name">
-						<%
-						while (OPEN_MOVIE_LIST_JDBC.rs.next()) {
-						%>
+						<option value=""></option>
+							<%
+							while (OPEN_MOVIE_LIST_JDBC.rs.next()) {
+							%>
+						
 						<option value="<%=OPEN_MOVIE_LIST_JDBC.rs.getString(1)%>">
 							<%=OPEN_MOVIE_LIST_JDBC.rs.getString(1)%>
 						</option>
 						<%
 						}
 						%>
-						
+
 				</select></td>
 			</tr>
 
