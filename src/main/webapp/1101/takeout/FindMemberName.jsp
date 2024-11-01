@@ -8,32 +8,33 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<table border="1">
 		<tr>
 			<th>아이디</th>
 			<th>닉네임</th>
-			<th>총합 금액</th>
 		</tr>
-
 		<%
-		String sql = "select t.member_id, m.member_name, to_char(sum(f.price), '999,999') || '원' "
-				+ "from member m, take_out t, food f " + "where m.member_id = t.member_id and f.food_name = t.food_name "
-				+ "group by t.member_id, m.member_name " + "order by t.member_id";
+		request.setCharacterEncoding("UTF-8");
+		String member_name = request.getParameter("member_name");
+		String sql = "select member_id, member_name " + "from member " + "where member_name like ? ";
 
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
+		jdbc.pstmt.setString(1, "%" + member_name + "%");
+
 		jdbc.rs = jdbc.pstmt.executeQuery();
 		while (jdbc.rs.next()) {
 		%>
 		<tr>
 			<td><%=jdbc.rs.getString(1)%></td>
 			<td><%=jdbc.rs.getString(2)%></td>
-			<td><%=jdbc.rs.getString(3)%></td>
 		</tr>
 		<%
 		}
 		jdbc.close();
 		%>
 	</table>
+	<a href="MemberNameInput.jsp">다시 검색</a>
 </body>
 </html>

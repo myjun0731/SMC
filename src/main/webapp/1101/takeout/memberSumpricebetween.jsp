@@ -10,15 +10,13 @@
 <body>
 	<table border="1">
 		<tr>
-			<th>아이디</th>
-			<th>닉네임</th>
-			<th>총합 금액</th>
+			<th>음식 이름</th>
+			<th>총합 매출</th>
 		</tr>
 
 		<%
-		String sql = "select t.member_id, m.member_name, to_char(sum(f.price), '999,999') || '원' "
-				+ "from member m, take_out t, food f " + "where m.member_id = t.member_id and f.food_name = t.food_name "
-				+ "group by t.member_id, m.member_name " + "order by t.member_id";
+		String sql = "select f.food_name, to_char(sum(f.price), '999,999')|| '원' " + "from food f, take_out t "
+				+ "where f.food_name = t.food_name " + "group by f.food_name " + "having sum(f.price) between 40000 and 50000";
 
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
@@ -28,12 +26,14 @@
 		<tr>
 			<td><%=jdbc.rs.getString(1)%></td>
 			<td><%=jdbc.rs.getString(2)%></td>
-			<td><%=jdbc.rs.getString(3)%></td>
 		</tr>
+
 		<%
 		}
 		jdbc.close();
 		%>
+
+
 	</table>
 </body>
 </html>

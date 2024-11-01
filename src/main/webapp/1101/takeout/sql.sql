@@ -25,3 +25,30 @@ order by t.member_id;
 select f.food_name, to_char(sum(f.price), '999,999')
 from food f, take_out t
 where f.food_name = t.food_name;
+group by f,food_name;
+
+
+
+select member_id, member_name
+from member
+where member_name like '%고%';
+
+select distinct m.member_id, m.member_name
+from member m, food f, take_out t
+where m.member_id = t.member_id
+and f.food_name = t.food_name order by m.member_id;
+
+select f.food_name, to_char(sum(f.price), '999,999')|| '원'
+from food f, take_out t
+where f.food_name = t.food_name
+group by f.food_name
+having sum(f.price) between 40000 and 50000;
+
+select m.member_id,
+m.member_name,
+to_char(sum(f.price), '999,999') || '원',
+count(t.member_id),
+to_char(round(sum(f.price)/count(t.member_id),0),'999,999') as avg
+from member m, food f, take_out t
+where m.member_id = t.member_id and f.food_name = t.food_name
+group by m.member_id, m.member_name;

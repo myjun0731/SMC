@@ -12,13 +12,11 @@
 		<tr>
 			<th>아이디</th>
 			<th>닉네임</th>
-			<th>총합 금액</th>
 		</tr>
 
 		<%
-		String sql = "select t.member_id, m.member_name, to_char(sum(f.price), '999,999') || '원' "
-				+ "from member m, take_out t, food f " + "where m.member_id = t.member_id and f.food_name = t.food_name "
-				+ "group by t.member_id, m.member_name " + "order by t.member_id";
+		String sql = "select distinct m.member_id, m.member_name " + "from member m, food f, take_out t "
+				+ "where m.member_id = t.member_id " + "and f.food_name = t.food_name order by m.member_id";
 
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
@@ -28,12 +26,14 @@
 		<tr>
 			<td><%=jdbc.rs.getString(1)%></td>
 			<td><%=jdbc.rs.getString(2)%></td>
-			<td><%=jdbc.rs.getString(3)%></td>
 		</tr>
+
 		<%
 		}
 		jdbc.close();
 		%>
+
+
 	</table>
 </body>
 </html>
