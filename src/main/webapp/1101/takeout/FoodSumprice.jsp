@@ -16,7 +16,7 @@
 
 		<%
 		String sql = "select f.food_name, to_char(sum(f.price),'999,999') || '원'" + "from food f, take_out t "
-                + "where f.food_name = t.food_name " + "group by f.food_name";
+				+ "where f.food_name = t.food_name " + "group by f.food_name";
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
 		jdbc.rs = jdbc.pstmt.executeQuery();

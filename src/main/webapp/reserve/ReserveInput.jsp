@@ -34,7 +34,7 @@ select {
 			<tr>
 				<th>예매 번호</th>
 				<td><input type="text" name="reserve_id"
-					value="<%=GET_ID_JDBC.rs.getString(1)%>" readonly/></td>
+					value="<%=GET_ID_JDBC.rs.getString(1)%>" readonly /></td>
 			</tr>
 
 			<%
@@ -81,10 +81,10 @@ select {
 				<th>상영 영화</th>
 				<td><select name="open_movie_name">
 						<option value=""></option>
-							<%
-							while (OPEN_MOVIE_LIST_JDBC.rs.next()) {
-							%>
-						
+						<%
+						while (OPEN_MOVIE_LIST_JDBC.rs.next()) {
+						%>
+
 						<option value="<%=OPEN_MOVIE_LIST_JDBC.rs.getString(1)%>">
 							<%=OPEN_MOVIE_LIST_JDBC.rs.getString(1)%>
 						</option>
