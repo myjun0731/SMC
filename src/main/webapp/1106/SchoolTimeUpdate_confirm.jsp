@@ -5,10 +5,7 @@
 <meta charset="UTF-8">
 
 <%
-p
-
 request.setCharacterEncoding("UTF-8");
-
 String today_start_time = request.getParameter("today_start_time");
 String today_lunch_time = request.getParameter("today_lunch_time");
 String today_end_time = request.getParameter("today_end_time");

@@ -19,12 +19,10 @@
 		</tr>
 
 		<%
-		String sql =
-
-				"select title, " + "to_char(today_start_time,'YYYY-MM-DD HH24:MI:SS'), "
-				+ "to_char(today_lunch_time,'YYYY-MM-DD HH24:MI:SS'), "
-				+ "to_char(today_end_time,'YYYY-MM-DD HH24:MI:SS') " + "from school_time ";
-
+		String sql = "select title, " + "to_char(today_start_time,'YYYY-MM-DD HH24:MI:SS'), "
+				+ "to_char(today_lunch_time,'YYYY-MM-DD HH24:MI:SS'), " + "to_char(today_end_time,'YYYY-MM-DD HH24:MI:SS') "
+				+ "from school_time ";
+		
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
 		jdbc.rs = jdbc.pstmt.executeQuery();

@@ -32,18 +32,18 @@
 			</tr>
 			<tr>
 				<th>조회</th>
-				<td><input type="text" name="title"
-					value="<%=jdbc.rs.getString(2)%>" readonly></td>
+				<td><input type="text" name="today_start_time"
+					value="<%=jdbc.rs.getString(2)%>"></td>
 			</tr>
 			<tr>
 				<th>점심시간</th>
-				<td><input type="text" name="title"
-					value="<%=jdbc.rs.getString(3)%>" readonly></td>
+				<td><input type="text" name="today_lunch_time"
+					value="<%=jdbc.rs.getString(3)%>"></td>
 			</tr>
 			<tr>
 				<th>종례</th>
-				<td><input type="text" name="title"
-					value="<%=jdbc.rs.getString(4)%>" readonly></td>
+				<td><input type="text" name="today_end_time"
+					value="<%=jdbc.rs.getString(4)%>"></td>
 			</tr>
 
 			<tr>
