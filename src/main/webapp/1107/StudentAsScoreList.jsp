@@ -9,7 +9,7 @@
 </head>
 <body>
 	<style>
-.StudentAsScoreList {
+.StudentAsScoreList:hover {
 	text-decoration: underline;
 }
 </style>
@@ -17,15 +17,15 @@
 
 	<table border="1">
 		<tr>
-			<th>학번</th>
+			<th>아이디</th>
 			<th>이름</th>
 			<th>점수</th>
+			<th>application_sw 순위</th>
 		</tr>
 
 		<%
 		String sql = "select st.student_id, st.korea_name, sc.application_sw, rank() over (order by sc.application_sw desc) "
-				+ "from student st, score sc "
-				+ "where st.student_id = sc.student_id and sc.application_sw is not null";
+				+ "from student st, score sc " + "where st.student_id = sc.student_id and sc.application_sw is not null";
 
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
@@ -37,6 +37,7 @@
 			<td><%=jdbc.rs.getString(1)%></td>
 			<td><%=jdbc.rs.getString(2)%></td>
 			<td><%=jdbc.rs.getString(3)%></td>
+			<td><%=jdbc.rs.getString(4)%></td>
 		</tr>
 		<%
 		}

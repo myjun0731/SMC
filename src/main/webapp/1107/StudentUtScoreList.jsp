@@ -9,7 +9,7 @@
 </head>
 <body>
 	<style>
-.StudentUtScoreList {
+.StudentUtScoreList:hover {
 	text-decoration: underline;
 }
 </style>
@@ -20,6 +20,7 @@
 			<th>학번</th>
 			<th>이름</th>
 			<th>점수</th>
+			<th>ui_test 순위</th>
 		</tr>
 
 		<%
@@ -36,6 +37,7 @@
 			<td><%=jdbc.rs.getString(1)%></td>
 			<td><%=jdbc.rs.getString(2)%></td>
 			<td><%=jdbc.rs.getString(3)%></td>
+			<td><%=jdbc.rs.getString(4)%></td>
 		</tr>
 		<%
 		}
