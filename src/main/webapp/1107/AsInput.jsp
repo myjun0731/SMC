@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Ut Input</title>
 <style>
-.UtInput {
+.AsInput {
 	text-decoration: underline;
 }
 </style>

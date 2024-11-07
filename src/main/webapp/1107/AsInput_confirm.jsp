@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+.StudentAsScoreList {
+	text-decoration: underline;
+}
+</style>
 </head>
 <body>
 	<%

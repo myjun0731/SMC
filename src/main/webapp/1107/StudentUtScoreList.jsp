@@ -9,7 +9,7 @@
 </head>
 <body>
 	<style>
-.StudentUtScoreList:hover {
+.StudentUtScoreList {
 	text-decoration: underline;
 }
 </style>
