@@ -13,14 +13,10 @@
 </style>
 
 <nav>
-	<a href="AllScoreList.jsp" class="AllScoreList" id="ta">All Score
-		List</a> <a href="StudentUtScoreList.jsp" class="StudentUtScoreList"
-		id="ta">Student UT Score List</a> <a href="StudentAsScoreList.jsp"
-		class="StudentAsScoreList" id="ta">Student AS Score List</a> <a
-		href="UtInput.jsp" class="UtInput" id="ta">UI Input</a> <a
-		href="AsInput.jsp" class="AsInput" id="ta">AS Input</a> <a
-		href="StudentList.jsp" class="StudentList" id="ta">Student List</a>
-	</tr>
-
-	</table>
+	<a href="AllScoreList.jsp" class="AllScoreList" id="ta">All Score List</a> <br>
+		<a href="StudentUtScoreList.jsp" class="StudentUtScoreList" id="ta">Student UT Score List</a><br>
+		<a href="StudentAsScoreList.jsp" class="StudentAsScoreList" id="ta">Student AS Score List</a><br>
+		<a href="UtInput.jsp" class="UtInput" id="ta">UI Input</a><br>
+		<a href="AsInput.jsp" class="AsInput" id="ta">AS Input</a><br>
+		<a href="StudentList.jsp" class="StudentList" id="ta">Student List</a><br>
 </nav>
