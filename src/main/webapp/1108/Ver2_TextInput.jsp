@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-	<form action="Ver1_TextInput_confirm.jsp">
+	<form action="Ver2_TextInput_confirm.jsp">
 		<table border="1">
 			<tr>
 				<th>회원아이디</th>
