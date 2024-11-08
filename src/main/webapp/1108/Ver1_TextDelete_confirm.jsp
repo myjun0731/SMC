@@ -16,5 +16,5 @@ jdbc.pstmt.executeQuery();
 jdbc.conn.commit();
 jdbc.close();
 
-response.sendRedirect("Ver1_TextInputList.jsp");
+response.sendRedirect("Ver2_TextInputList.jsp");
 %>
