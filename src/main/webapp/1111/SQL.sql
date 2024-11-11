@@ -16,7 +16,7 @@ insert into tbl_goods_01 values('110007','우류',850,600, to_date('20190302','YYY
 
 create table store_tbl_003(
 store_cd varchar2(5) not null primary key,
-store_nm varchar2(20),
+store_nm varchar2(20)
 goods_fg number(1)
 );
 
@@ -46,7 +46,6 @@ References tbl_goods_01(goods_cd)
 );
 
 
-
 insert into sale_tbl_003 values('0001',to_date('20190325','YYYYMMDD'),'1','A001','110001',2,'02');
 insert into sale_tbl_003 values('0002',to_date('20190325','YYYYMMDD'),'1','B001','110003',2,'02');
 insert into sale_tbl_003 values('0003',to_date('20190325','YYYYMMDD'),'1','D001','110003',1,'01');
@@ -58,3 +57,30 @@ insert into sale_tbl_003 values('0008',to_date('20190325','YYYYMMDD'),'1','A003'
 insert into sale_tbl_003 values('0009',to_date('20190325','YYYYMMDD'),'1','B001','110001',2,'01');
 insert into sale_tbl_003 values('0010',to_date('20190325','YYYYMMDD'),'1','A002','110006',1,'02');
 
+
+select to_char(max(goods_cd)+1,'FM000000'), to_char(sysdate, 'YYYY-MM-DD') from tbl_goods_01;
+
+select goods_cd, goods_nm, to_char(goods_price, 'L999,999'),
+to_char(cost,'L999,999'), to_char(in_date,'YYYY-MM-DD') from tbl_goods_01;
+
+select to_char(goods_cd, 'FM000000'),
+goods_nm, goods_price, cost, to_char(in_date,'YYYY-MM-DD') from tbl_goods_01 where goods_cd = '110001';
+
+select to_char(max(sale_cnt) +1, 'FM0000'), to_char(sysdate, 'YYYYMMDD') from sale_tbl_003;
+
+select st.store_cd, st.store_nm,
+to_char(NVl(sum(decode(sa.pay_type,'01', sa.sale_cnt, null,0)*g.goods_price),0),'999,999') || '원' as 현금매출,
+to_char(NVl(sum(decode(sa.pay_type,'02', sa.sale_cnt, null,0)*g.goods_price),0),'999,999') || '원' as 카드매출,
+to_char(sum(sa.sale_cnt * g.goods_price),'999,999') || '원' as 총매출
+from sale_tbl_003 sa, store_tbl_003 st, tbl_goods_01 g
+where sa.store_cd = st.store_cd and sa.goods_cd = g.goods_cd
+group by st.store_cd, st.store_nm
+order by 총매출 DESC;
+
+select decode(sa.sale_fg,'1','핀매', '2', '판매취소'), sa.sale_no,
+to_char(sa.sale_ymd, 'YYYY-MM-DD'), st.store_nm,
+sa.sale_cnt,
+to_char(g.goods_price * sa.sale_cnt, '999,999') || '원',
+decode(sa.pay_type,'01','현금','02','카드')
+from sale_tbl_003 sa, store_tbl_003 st, tbl_goods_01 g
+where sa.store_cd = st.store_cd and sa.goods_cd = g.goods_cd and sa.store_cd = 'A001';
