@@ -7,46 +7,47 @@
 <title>Insert title here</title>
 <style>
 * {
-	box-sizing: 0px;
-	margin: 0px;
+	margin: 0;
 }
 
 header {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	height: 60px;
-	background-color: black;
+	height: 50px;
+	line-height: 50px;
 	text-align: center;
-	font-size: 20px;
+	background-color: black;
 	color: white;
-	line-height: 60px;
+	font-size: 23px;
 }
 
 nav {
 	position: fixed;
-	top: 60px;
+	top: 50px;
 	width: 100%;
-	height: 40px;
+	height: 30px;
+	line-height: 30px;
 	background-color: gray;
 	color: white;
-	line-height: 40px;
 }
 
-a {
+nav a {
 	padding-left: 20px;
+	font-size: 14px;
 }
 </style>
+
 </head>
 <body>
 	<header>
-		<b>오디션 참가 현황 20302</b>
+		<b>오디션 참가 현황</b>
 	</header>
 
 	<nav>
 		<a href="insert.jsp">오디션등록</a> <a href="list.jsp">참가자목록조회</a> <a
-			href="score.jsp">멘토접수조회</a> <a href="rank.jsp">참가자등수조회</a> <a
-			href="index.jsp">홈으로</a>
+			href="score.jsp">멘토점수조회</a> <a href="rank.jsp">참가자등수조회</a> <a
+			href="home.jsp">홈으로</a>
 	</nav>
 </body>
 </html>
