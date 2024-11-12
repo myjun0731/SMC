@@ -53,7 +53,7 @@ td {
 
 	<section>
 		<%
-		String sql = "select to_char(max(sale_cnt) +1, 'FM0000'), to_char(sysdate, 'YYYYMMDD') from sale_tbl_003";
+		String sql = "select to_char(max(sale_no) +1, 'FM0000'), to_char(sysdate, 'YYYYMMDD') from sale_tbl_003";
 
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
@@ -79,8 +79,8 @@ td {
 					<th>판매구분</th>
 					<td><select name="sale_fg">
 							<option value="">선택</option>
-							<option value="01">판매</option>
-							<option value="02">판매취소</option>
+							<option value="1">판매</option>
+							<option value="2">판매취소</option>
 					</select></td>
 				</tr>
 				<tr>
