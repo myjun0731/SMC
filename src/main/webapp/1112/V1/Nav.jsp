@@ -26,7 +26,7 @@ nav a {
 <body>
 	<nav>
 		<a href="SaleInput.jsp">매출등록</a> <a href="GoodsList.jsp">상품관리</a> <a
-			href="StoreAllList.jsp">매출현황</a> <a href="Index.jsp">홈으로</a>
+			href="storeAllList.jsp">매출현황</a> <a href="Index.jsp">홈으로</a>
 	</nav>
 </body>
 </html>
