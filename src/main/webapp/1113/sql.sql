@@ -198,7 +198,7 @@ VALUES (seq_food.NEXTVAL, '20101', '치즈스틱', 3, TO_DATE('2024-10-15 16:30:00',
 
 SELECT s.snack_name,
 TO_CHAR(SUM(s.snack_price * gs.amount), '999,999') || '원' AS 총매출,
-RANK() OVER (ORDER BY SUM(s.snack_price + gs.amount) DESC) AS 순위, CASE WHEN SUM(s.snack_price* gs.amount) >= 15000 THEN '재판매' WHEN SUM(s.snack_price* gs.amount) >= 10000 THEN '보류' ELSE '판매 중단' END AS 재판매여부
+RANK() OVER (ORDER BY SUM(s.snack_price * gs.amount) DESC) AS 순위, CASE WHEN SUM(s.snack_price* gs.amount) >= 15000 THEN '재판매' WHEN SUM(s.snack_price* gs.amount) >= 10000 THEN '보류' ELSE '판매 중단' END AS 재판매여부
 FROM snack s, get_snack gs
 WHERE s.snack_name = gs.snack_name
 GROUP BY s.snack_name;
