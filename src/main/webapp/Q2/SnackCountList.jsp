@@ -12,15 +12,14 @@
 	<table border="1">
 		<tr>
 			<th>학번</th>
-			<th>시험 본 횟수</th>
+			<th>매장 방문한 횟수 출력</th>
 		</tr>
 
 		<%
 		String sql =
-
 				"select gs.student_id as 학번, count(gs.student_id) || '번' as 매장방문한횟수 " + "from get_snack gs "
 				+ "group by gs.student_id";
-
+		
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
 		jdbc.rs = jdbc.pstmt.executeQuery();
