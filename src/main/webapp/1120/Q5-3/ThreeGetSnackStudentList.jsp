@@ -14,9 +14,9 @@
 			<th>학번</th>
 			<th>이름</th>
 			<th>간식 구매한 수량</th>
-			<th>구매한 수량에 따라 별명 부여</th>
+			<th>수학총합</th>
+			<th>수학평균</th>
 		</tr>
-
 		<%
 		String sql =
 
@@ -37,6 +37,7 @@
 			<td><%=jdbc.rs.getString(2)%></td>
 			<td><%=jdbc.rs.getString(3)%></td>
 			<td><%=jdbc.rs.getString(4)%></td>
+			<td><%=jdbc.rs.getString(5)%></td>
 		</tr>
 		<%
 		}
