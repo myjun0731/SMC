@@ -5,7 +5,6 @@
 --별칭 : 간식이름, 간식가격, 구매된수량, 총매출
 --+ 간식 이름을 기준으로 오름차순
 
-
 SELECT s.snack_name AS 간식이름, 
 TO_CHAR(s.snack_price, '999,999') AS 간식가격,
 SUM(gs.amount) AS 구매된수량, 
