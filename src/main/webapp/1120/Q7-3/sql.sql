@@ -21,23 +21,3 @@ from snack s, get_snack gs
 where s.snack_name = gs.snack_name
 group by s.snack_name, s.snack_price
 order by s.snack_name;
-
---=======================
-
-
-
-SELECT s.snack_name AS 간식이름, 
-TO_CHAR(s.snack_price, '999,999') AS 간식가격,
-SUM(gs.amount) AS 구매된수량, 
-TO_CHAR(SUM(s.snack_price * gs.amount), '999,999') AS 총매출
-FROM snack s, get_snack gs
-WHERE s.snack_name = gs.snack_name
-GROUP BY s.snack_name, s.snack_price
-ORDER BY s.snack_name;
-
-SELECT s.snack_name,
-TO_CHAR(SUM(s.snack_price * gs.amount), '999,999') || '원' AS 총매출,
-RANK() OVER (ORDER BY SUM(s.snack_price * gs.amount) DESC) AS 순위, CASE WHEN SUM(s.snack_price* gs.amount) >= 15000 THEN '재판매' WHEN SUM(s.snack_price* gs.amount) >= 10000 THEN '보류' ELSE '판매 중단' END AS 재판매여부
-FROM snack s, get_snack gs
-WHERE s.snack_name = gs.snack_name
-GROUP BY s.snack_name;
