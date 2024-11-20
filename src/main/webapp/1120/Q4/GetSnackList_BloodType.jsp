@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h2>혈액형 별로 매장 방문 횟수 구하기</h2>
 	<table border="1">
 		<tr>
 			<th>혈액형</th>

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h2>학생이 간식에 사용한 금액 출력</h2>
 	<table border="1">
 		<tr>
 			<th>이름</th>
