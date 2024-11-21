@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    section {
+        padding-top: 10px;
+        position: fixed;
+        margin-top: 80px;
+        width: 100%;
+        height: 100%;
+        background-color: #8dffd1;
+        line-height: 30px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+
+<form action="" name="form">
+
+    <section>
+        <h2 align="center"> 홈쇼핑 회원 등록</h2>
+        <center>
+            <table border="1">
+
+                <tr>
+                    <td>회원번호(자동발생)</td>
+                    <td><input type="text" name="custno" value="1234" redonly></td>
+                </tr>
+                <tr>
+                    <td>회원성명</td>
+                    <td><input type="text" name="custname"></td>
+                </tr>
+                <tr>
+                    <td>회원전화</td>
+                    <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                    <td>회원주소</td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+
+                <tr>
+                    <td>가입일자</td>
+                    <td><input type="text" name="jdindate" value="1234" redonly></td>
+                </tr>
+                <tr>
+                    <td>고객등급</td>
+                    <td><input type="text" name="grade"></td>
+                </tr>
+                <tr>
+                    <td>도시코드</td>
+                    <td><input type="text" name="city"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                    <input type="button" value="등급" onclick="update()">
+                    <input type="button" value="조회" onclick="">
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </section>
+
+    <script>
+        function update() {
+            if (document.forms.form.custno.value.trim() == "") {
+                alert("회원정보가 입력되지 않음.");
+                return false;
+            }
+            else if (document.forms.form.custname.value.trim() == "") {
+                alert("회원성명이 입력되지 않음.");
+                return false;
+            }
+            else if (document.forms.form.phone.value.trim() == "") {
+                alert("전화번호가 입력되지 않음.");
+                return false;
+            }
+            else if (document.forms.form.address.value.trim() == "") {
+                alert("주소가 입력되지 않음.");
+                return false;
+            }
+            else if (document.forms.form.grade.value.trim() == "") {
+                alert("등급이 입력되지 않음.");
+                return false;
+            }
+            else if (document.forms.form.city.value.trim() == "") {
+                alert("도시코드가 입력되지 않음.");
+                return false;
+            } else {
+                alert("등록 완료");
+                document.forms.form.submit();
+                return true;
+            }
+        }
+    </script>
+</form>
+</body>
+
+</html>
