@@ -54,158 +54,158 @@ foreign key (student_id) references student(student_id) on delete cascade,
 foreign key (snack_name) references snack(snack_name) on delete cascade
 );
 
-INSERT INTO person VALUES('Á¶Á¾Âù', '20061009-3******', '2006-10-09', 'A');
-INSERT INTO person VALUES('¹ÚÂù¹Ì', '20050205-4******', '2005-02-05', 'O');
-INSERT INTO person VALUES('´©±º°¡', '19991105-1******', '1999-11-05', 'B');
+INSERT INTO person VALUES('ì¡°ì¢…ì°¬', '20061009-3******', '2006-10-09', 'A');
+INSERT INTO person VALUES('ë°•ì°¬ë¯¸', '20050205-4******', '2005-02-05', 'O');
+INSERT INTO person VALUES('ëˆ„êµ°ê°€', '19991105-1******', '1999-11-05', 'B');
 
 
-INSERT INTO student VALUES('30307', 'Á¶Á¾Âù');
+INSERT INTO student VALUES('30307', 'ì¡°ì¢…ì°¬');
 
-INSERT INTO student VALUES('10101', '±è¹Î¼ö');
-INSERT INTO student VALUES('10110', 'ÀÌÁöÇö');
-INSERT INTO student VALUES('10105', '¹ÚÁØ¿µ');
+INSERT INTO student VALUES('10101', 'ê¹€ë¯¼ìˆ˜');
+INSERT INTO student VALUES('10110', 'ì´ì§€í˜„');
+INSERT INTO student VALUES('10105', 'ë°•ì¤€ì˜');
 
-INSERT INTO student VALUES('20113', 'ÃÖÀ¯Áø');
-INSERT INTO student VALUES('20101', '±èÅÂÈñ');
-INSERT INTO student VALUES('20118', 'È«±æµ¿');
+INSERT INTO student VALUES('20113', 'ìµœìœ ì§„');
+INSERT INTO student VALUES('20101', 'ê¹€íƒœí¬');
+INSERT INTO student VALUES('20118', 'í™ê¸¸ë™');
 
-INSERT INTO student VALUES('30314', 'Á¤¼öºó');
-INSERT INTO student VALUES('30101', '°­ÇÑ¼Ö');
-INSERT INTO student VALUES('30107', '¼ÛÇÏ´Ã');
-INSERT INTO student VALUES('30108', 'ÀÌ¿µ¼ö');
+INSERT INTO student VALUES('30314', 'ì •ìˆ˜ë¹ˆ');
+INSERT INTO student VALUES('30101', 'ê°•í•œì†”');
+INSERT INTO student VALUES('30107', 'ì†¡í•˜ëŠ˜');
+INSERT INTO student VALUES('30108', 'ì´ì˜ìˆ˜');
 
 
 INSERT INTO test VALUES
 (seq_score.NEXTVAL, 
-TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '10101',
+TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '10101',
 95, 88, 92, 85, 91); 
 
 INSERT INTO test VALUES
 (seq_score.NEXTVAL, 
-TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '10110', 
+TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '10110', 
 80, 90, 87, 76, 83); 
 
 INSERT INTO test VALUES
 (seq_score.NEXTVAL, 
-TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '10105', 
+TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '10105', 
 70, 78, 85, 82, 88); 
 
 INSERT INTO test VALUES
 (seq_score.NEXTVAL, 
-TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '20113', 
+TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '20113', 
 85, 92, 88, 90, 93);
 
 INSERT INTO test VALUES
 (seq_score.NEXTVAL, 
-TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '20101', 
+TO_DATE('2024-05-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '20101', 
 88, 86, 91, 80, 90); 
 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), '±â¸»°í»ç', '10101', 
+TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), 'ê¸°ë§ê³ ì‚¬', '10101', 
 78, 85, 80, 89, 92); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), '±â¸»°í»ç', '10110', 
+TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), 'ê¸°ë§ê³ ì‚¬', '10110', 
 92, 87, 94, 78, 80); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), '±â¸»°í»ç', '20113', 
+TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), 'ê¸°ë§ê³ ì‚¬', '20113', 
 95, 91, 88, 90, 94); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), '±â¸»°í»ç', '30314', 
+TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), 'ê¸°ë§ê³ ì‚¬', '30314', 
 70, 80, 85, 75, 82); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), '±â¸»°í»ç', '30101', 
+TO_DATE('2024-05-02 11:00', 'YYYY-MM-DD HH24:MI'), 'ê¸°ë§ê³ ì‚¬', '30101', 
 85, 88, 90, 86, 89); 
 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '10101', 
+TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '10101', 
 80, 82, 88, 78, 90); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '20113', 
+TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '20113', 
 92, 93, 90, 85, 92); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '20101', 
+TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '20101', 
 75, 77, 79, 85, 87);
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '30107', 
+TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '30107', 
 89, 84, 91, 92, 86); 
 
 INSERT INTO test VALUES(seq_score.NEXTVAL, 
-TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'Áß°£°í»ç', '30108', 
+TO_DATE('2024-06-01 09:00', 'YYYY-MM-DD HH24:MI'), 'ì¤‘ê°„ê³ ì‚¬', '30108', 
 93, 90, 88, 87, 91); 
 
 
-INSERT INTO snack VALUES('ÃÊÄÚÆÄÀÌ', 1500);
-INSERT INTO snack VALUES('¶±ººÀÌ', 3000);
-INSERT INTO snack VALUES('°¨ÀÚÆ¢±è', 2500);
-INSERT INTO snack VALUES('È£µÎ°úÀÚ', 1800);
-INSERT INTO snack VALUES('Ä¡Áî½ºÆ½', 2000);
+INSERT INTO snack VALUES('ì´ˆì½”íŒŒì´', 1500);
+INSERT INTO snack VALUES('ë–¡ë³¶ì´', 3000);
+INSERT INTO snack VALUES('ê°ìíŠ€ê¹€', 2500);
+INSERT INTO snack VALUES('í˜¸ë‘ê³¼ì', 1800);
+INSERT INTO snack VALUES('ì¹˜ì¦ˆìŠ¤í‹±', 2000);
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '10101', 'ÃÊÄÚÆÄÀÌ', 3, TO_DATE('2024-10-01 14:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '10101', 'ì´ˆì½”íŒŒì´', 3, TO_DATE('2024-10-01 14:30:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '10110', '¶±ººÀÌ', 1, TO_DATE('2024-10-02 11:45:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '10110', 'ë–¡ë³¶ì´', 1, TO_DATE('2024-10-02 11:45:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '10105', '°¨ÀÚÆ¢±è', 2, TO_DATE('2024-10-03 16:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '10105', 'ê°ìíŠ€ê¹€', 2, TO_DATE('2024-10-03 16:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '20113', 'È£µÎ°úÀÚ', 5, TO_DATE('2024-10-04 13:10:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '20113', 'í˜¸ë‘ê³¼ì', 5, TO_DATE('2024-10-04 13:10:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '20101', 'Ä¡Áî½ºÆ½', 2, TO_DATE('2024-10-05 09:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '20101', 'ì¹˜ì¦ˆìŠ¤í‹±', 2, TO_DATE('2024-10-05 09:30:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '20118', 'ÃÊÄÚÆÄÀÌ', 1, TO_DATE('2024-10-06 12:20:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '20118', 'ì´ˆì½”íŒŒì´', 1, TO_DATE('2024-10-06 12:20:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '30314', '¶±ººÀÌ', 2, TO_DATE('2024-10-07 17:35:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '30314', 'ë–¡ë³¶ì´', 2, TO_DATE('2024-10-07 17:35:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '30101', '°¨ÀÚÆ¢±è', 3, TO_DATE('2024-10-08 18:40:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '30101', 'ê°ìíŠ€ê¹€', 3, TO_DATE('2024-10-08 18:40:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '30107', 'È£µÎ°úÀÚ', 4, TO_DATE('2024-10-09 10:25:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '30107', 'í˜¸ë‘ê³¼ì', 4, TO_DATE('2024-10-09 10:25:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '30108', 'Ä¡Áî½ºÆ½', 1, TO_DATE('2024-10-10 14:50:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '30108', 'ì¹˜ì¦ˆìŠ¤í‹±', 1, TO_DATE('2024-10-10 14:50:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '10101', 'ÃÊÄÚÆÄÀÌ', 2, TO_DATE('2024-10-11 15:15:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '10101', 'ì´ˆì½”íŒŒì´', 2, TO_DATE('2024-10-11 15:15:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '10110', '¶±ººÀÌ', 1, TO_DATE('2024-10-12 11:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '10110', 'ë–¡ë³¶ì´', 1, TO_DATE('2024-10-12 11:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '10105', '°¨ÀÚÆ¢±è', 5, TO_DATE('2024-10-13 13:55:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '10105', 'ê°ìíŠ€ê¹€', 5, TO_DATE('2024-10-13 13:55:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '20113', 'È£µÎ°úÀÚ', 2, TO_DATE('2024-10-14 10:10:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '20113', 'í˜¸ë‘ê³¼ì', 2, TO_DATE('2024-10-14 10:10:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO get_snack  
-VALUES (seq_food.NEXTVAL, '20101', 'Ä¡Áî½ºÆ½', 3, TO_DATE('2024-10-15 16:30:00', 'YYYY-MM-DD HH24:MI:SS'));
+VALUES (seq_food.NEXTVAL, '20101', 'ì¹˜ì¦ˆìŠ¤í‹±', 3, TO_DATE('2024-10-15 16:30:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 
 SELECT s.snack_name,
-TO_CHAR(SUM(s.snack_price * gs.amount), '999,999') || '¿ø' AS ÃÑ¸ÅÃâ,
-RANK() OVER (ORDER BY SUM(s.snack_price * gs.amount) DESC) AS ¼øÀ§, CASE WHEN SUM(s.snack_price* gs.amount) >= 15000 THEN 'ÀçÆÇ¸Å' WHEN SUM(s.snack_price* gs.amount) >= 10000 THEN 'º¸·ù' ELSE 'ÆÇ¸Å Áß´Ü' END AS ÀçÆÇ¸Å¿©ºÎ
+TO_CHAR(SUM(s.snack_price * gs.amount), '999,999') || 'ì›' AS ì´ë§¤ì¶œ,
+RANK() OVER (ORDER BY SUM(s.snack_price * gs.amount) DESC) AS ìˆœìœ„, CASE WHEN SUM(s.snack_price* gs.amount) >= 15000 THEN 'ì¬íŒë§¤' WHEN SUM(s.snack_price* gs.amount) >= 10000 THEN 'ë³´ë¥˜' ELSE 'íŒë§¤ ì¤‘ë‹¨' END AS ì¬íŒë§¤ì—¬ë¶€
 FROM snack s, get_snack gs
 WHERE s.snack_name = gs.snack_name
 GROUP BY s.snack_name;
 
 
 
-SELECT st.student_id, st.person_name, TO_CHAR(SUM(gs.amount * s.snack_price), '999,999') || '¿ø' FROM student st, get_snack gs, snack s
+SELECT st.student_id, st.person_name, TO_CHAR(SUM(gs.amount * s.snack_price), '999,999') || 'ì›' FROM student st, get_snack gs, snack s
 WHERE st.student_id = gs.student_id AND s.snack_name = gs.snack_name GROUP BY st.student_id, st.person_name ORDER BY st.student_id;
 
 SELECT TO_CHAR(test_date, 'YYYY-MM-DD'), test_name, student_id, (math + korean + english + history + science) / 5 FROM test;
@@ -219,8 +219,8 @@ select count(student_id) from test;
 select count(distinct student_id) from test;
 
 select to_char(test_date, 'YYYY-MM-DD'), test_name from test;
-select distinct to_char(test_date,'YYYY-MM-DD') as ½ÃÇè³¯Â¥, test_name from test
-order by ½ÃÇè³¯Â¥;
+select distinct to_char(test_date,'YYYY-MM-DD') as ì‹œí—˜ë‚ ì§œ, test_name from test
+order by ì‹œí—˜ë‚ ì§œ;
 
 select test_date, test_name, student_id, math, korean, english, history, science
 from test
@@ -240,11 +240,11 @@ FROM test
 WHERE SUBSTR(student_id, 1, 1) = '1';
 SELECT TO_CHAR(test_date, 'YYYY-MM-DD'), student_id, math + korean + english + history + science
 FROM test;
-SELECT gs.get_snack_id, gs.student_id, TO_CHAR(s.snack_price* gs.amount, '999,999') || 'ÀÏ'
+SELECT gs.get_snack_id, gs.student_id, TO_CHAR(s.snack_price* gs.amount, '999,999') || 'ì¼'
 FROM snack s, get_snack gs WHERE gs.snack_name = s.snack_name;
 
-SELECT snack_name FROM snack WHERE snack_name LIKE '%ÀÌ%';
-SELECT s.snack_name, SUM(s.snack_price* gs.amount) AS ÃÑ¸ÅÃâ FROM snack s, get_snack gs
+SELECT snack_name FROM snack WHERE snack_name LIKE '%ì´%';
+SELECT s.snack_name, SUM(s.snack_price* gs.amount) AS ì´ë§¤ì¶œ FROM snack s, get_snack gs
 WHERE s.snack_name = gs.snack_name GROUP BY s.snack_name;
 
 
@@ -255,30 +255,30 @@ SELECT TO_CHAR(get_snack_id, 'FM00000') FROM get_snack;
 
 SELECT person_name, blood_type,
 DECODE(blood_type,
-'A', '»ç°ú',
-'B', '¹Ù³ª³ª',
-'O', '¿À·»Áö',
-'AB', '¾øÀ½')
+'A', 'ì‚¬ê³¼',
+'B', 'ë°”ë‚˜ë‚˜',
+'O', 'ì˜¤ë Œì§€',
+'AB', 'ì—†ìŒ')
 FROM person;
 
 SELECT person_name, blood_type,
 DECODE(blood_type,
-'A', '»ç°ú',
-'B', '¹Ù³ª³ª',
-'O', '¿À·»Áö',
-'AB', '¾øÀ½')
+'A', 'ì‚¬ê³¼',
+'B', 'ë°”ë‚˜ë‚˜',
+'O', 'ì˜¤ë Œì§€',
+'AB', 'ì—†ìŒ')
 FROM person;
 
 SELECT TO_CHAR(test_date, 'YYYY-MM-DD HH24:MI'),
 test_name,
-SUM(math) / COUNT(math) AS ¼öÇĞÀüÃ¼Æò±Õ, ROUND (SUM(math) / COUNT (math), 0) AS ¹İ¿Ã¸²
+SUM(math) / COUNT(math) AS ìˆ˜í•™ì „ì²´í‰ê· , ROUND (SUM(math) / COUNT (math), 0) AS ë°˜ì˜¬ë¦¼
 FROM test
 WHERE TO_CHAR(test_date, 'YYYY-MM-DD HH24:MI') = '2024-05-01 09:00'
 GROUP BY test_date, test_name;
 
 SELECT TO_CHAR(test_date, 'YYYY-MM-DD HH24:MI'),
-test_name, SUM(korean) / COUNT (korean) AS ±¹¾îÀüÃ¼Æò±Õ,
-TRUNC(SUM(korean) / COUNT (korean), 0) AS ¹İ¿Ã¸²
+test_name, SUM(korean) / COUNT (korean) AS êµ­ì–´ì „ì²´í‰ê· ,
+TRUNC(SUM(korean) / COUNT (korean), 0) AS ë°˜ì˜¬ë¦¼
 FROM test
 WHERE TO_CHAR(test_date, 'YYYY-MM-DD HH24:MI') = '2024-05-01 09:00'
 GROUP BY test_date, test_name;
