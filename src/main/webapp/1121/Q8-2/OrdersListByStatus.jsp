@@ -1,4 +1,4 @@
-<%@page import="study.JDBC"%>
+<%@page import="ex_date.JDBC"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,9 +28,10 @@
 				+ "SUM(CASE WHEN O.status = '주문완료' THEN P.price * O.quantity ELSE 0 END) || '원' AS 주문완료총매출, "
 				+ "SUM(CASE WHEN O.status = '배송완료' THEN P.price * O.quantity ELSE 0 END) || '원' AS 배송완료총매출, "
 				+ "SUM(CASE WHEN O.status = '주문취소' THEN P.price * O.quantity ELSE 0 END) || '원' AS 주문취소총매출, "
-				+ "SUM(P.price * O.quantity) || '원' AS 총합 " + "FROM Products P "
-				+ "JOIN Orders O ON P.product_id = O.product_id " + "GROUP BY P.product_id, P.name "
-				+ "ORDER BY P.product_id";
+				+ "SUM(P.price * O.quantity) || '원' AS 총합, "
+				+ "(SUM(P.price * O.quantity) - SUM(CASE WHEN O.status = '주문취소' THEN P.price * O.quantity ELSE 0 END)) || '원' AS 주문취소제외총매출 "
+				+ "FROM Products P " + "JOIN Orders O ON P.product_id = O.product_id "
+				+ "GROUP BY P.product_id, P.name " + "ORDER BY P.product_id";
 
 		JDBC jdbc = new JDBC();
 		jdbc.pstmt = jdbc.conn.prepareStatement(sql);
@@ -46,6 +47,7 @@
 			<td><%=jdbc.rs.getString(5)%></td>
 			<td><%=jdbc.rs.getString(6)%></td>
 			<td><%=jdbc.rs.getString(7)%></td>
+			<td><%=jdbc.rs.getString(8)%></td>
 		</tr>
 		<%
 		}

@@ -24,8 +24,8 @@ SELECT
     SUM(CASE WHEN O.status = '주문완료' THEN P.price * O.quantity ELSE 0 END) || '원' AS 주문완료총매출,
     SUM(CASE WHEN O.status = '배송완료' THEN P.price * O.quantity ELSE 0 END) || '원' AS 배송완료총매출,
     SUM(CASE WHEN O.status = '주문취소' THEN P.price * O.quantity ELSE 0 END) || '원' AS 주문취소총매출,
-    SUM(CASE WHEN O.status != '주문취소' THEN P.price * O.quantity ELSE 0 END) || '원' AS 주문취소제외총매출,
-    SUM(P.price * O.quantity) AS 총합
+    SUM(P.price * O.quantity) AS 총합,
+    (SUM(P.price * O.quantity) - SUM(CASE WHEN O.status = '주문취소' THEN P.price * O.quantity ELSE 0 END)) || '원' AS 주문취소제외총매출
 FROM Products P
 JOIN Orders O ON P.product_id = O.product_id
 GROUP BY P.product_id, P.name
