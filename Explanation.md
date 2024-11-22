@@ -1,4 +1,4 @@
-# build/classes
+# Folder build/classes
   JAVA Class file
-# src/main
+# Folder src/main
   JSP, SQL, JAVA file
