@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            margin-top: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: red rgb(255, 255, 255) green blue;
+        }
+    </style>
+
+    <select onchange="al(this)">
+        <option value="1" price="8000">닭강정</option>
+        <option value="2" price="5000">샌드위치</option>
+        <option value="3" price="10000">롤케이크</option>
+    </select>
+
+    <input type="text" id="textInput" onchange="textChange()">
+    <p id="text"></p>
+
+    <input type="button" value="Red" onclick="ChangeRed()">
+    <input type="button" value="Blue" onclick="ChangeBlue()">
+    <input type="button" value="Green" onclick="ChangeGreen()">
+    <div></div>
+
+    <script>
+        function al(select) {
+            var text = select.options[select.selectedIndex].value;
+            var price = select.options[select.selectedIndex].getAttribute("price");
+            alert(price + "원");
+        }
+
+        function textChange() {
+            var textInput = document.getElementById("textInput");
+            var text = document.getElementById("text");
+            text.innerText = textInput.value;
+        }
+
+        function ChangeRed() {
+            document.querySelector("div").style.backgroundColor = "red";
+        }
+        function ChangeBlue() {
+            document.querySelector("div").style.backgroundColor = "Blue";
+        }
+        function ChangeGreen() {
+            document.querySelector("div").style.backgroundColor = "Green";
+        }
+
+    </script>
+</body>
+
+</html>

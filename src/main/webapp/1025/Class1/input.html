@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form">
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td><input type="text" name="merberId"></td>
+            </tr>
+            <tr>
+                <td>InputValue</td>
+                <td><input type="text" name="InputValue"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"> <input type="button" value="제출" onclick="update()"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function update() {
+            if (document.form.merberId.value.trim() == "") {
+                alert("아이디 X");
+                document.form.merberId.focus();
+                return false;
+            }
+            else if (document.form.InputValue.value.trim() == "") {
+                alert("입력값 X");
+                document.form.InputValue.focus();
+                return false;
+            } else {
+                alert("성공");
+                document.form.submit();
+                return true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
